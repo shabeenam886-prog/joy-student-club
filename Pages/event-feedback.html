@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Feedback</title>
+    <link rel="stylesheet" href="pages-style.css">
+</head>
+
+<body>
+
+    <div class="page-card">
+
+        <h1>💬 Event Feedback</h1>
+
+        <form onsubmit="showFeedbackMessage(); return false;">
+
+            <label>👤 Member Name:</label><br>
+            <input type="text" placeholder="Enter your name" required>
+            <br><br>
+
+            <label>🎉 Event Name:</label><br>
+            <input type="text" placeholder="Enter event name" required>
+            <br><br>
+
+            <label>⭐ Rating:</label><br>
+            <select required>
+                <option value="">Select rating</option>
+                <option>🌟 Excellent</option>
+                <option>👍 Good</option>
+                <option>🙂 Average</option>
+                <option>📝 Needs Improvement</option>
+            </select>
+            <br><br>
+
+            <label>💭 Feedback:</label><br>
+            <textarea rows="5" cols="40"
+                placeholder="Write your feedback" required></textarea>
+            <br><br>
+
+            <button type="submit">📨 Submit Feedback</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        function showFeedbackMessage() {
+            alert("Thank you for your valuable feedback! 😊");
+        }
+    </script>
+
+</body>
+</html>

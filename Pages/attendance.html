@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance</title>
+    <link rel="stylesheet" href="pages-style.css">
+</head>
+
+<body>
+
+    <h1>Club Attendance</h1>
+
+    <form onsubmit="showAttendanceMessage(); return false;">
+        <label>Member Name:</label><br>
+        <input type="text" placeholder="Enter member name" required>
+        <br><br>
+
+        <label>Date:</label><br>
+        <input type="date" required>
+        <br><br>
+
+        <label>Attendance:</label><br>
+        <select required>
+            <option value="">Select</option>
+            <option>Present</option>
+            <option>Absent</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Save Attendance</button>
+    </form>
+    <script>
+        function showAttendanceMessage() {
+            alert("Your attendance has been recorded successfully!");
+}
+    </script>
+
+</body>
+</html>

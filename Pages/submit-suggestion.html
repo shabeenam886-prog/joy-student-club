@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Suggestion</title>
+    <link rel="stylesheet" href="pages-style.css">
+</head>
+
+<body>
+
+    <div class="page-card">
+
+        <h1>💡 Submit Suggestion</h1>
+
+        <h2>📝 Share Your Suggestion</h2>
+
+        <p>
+            Your suggestions help us improve the Student Club Management
+            System and make club activities better for everyone.
+        </p>
+
+        <form onsubmit="showMessage(); return false;">
+
+            <label>👤 Member Name:</label><br>
+            <input type="text" placeholder="Enter your name" required>
+            <br><br>
+
+            <label>💡 Suggestion:</label><br>
+            <textarea rows="6" placeholder="Write your suggestion" required></textarea>
+            <br><br>
+
+            <button type="submit">📤 Submit Suggestion</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("✅ Thank you! Your suggestion has been submitted successfully.");
+        }
+    </script>
+
+</body>
+</html>
