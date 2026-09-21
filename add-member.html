@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Member</title>
+    <link rel="stylesheet" href="pages-style.css">
+</head>
+
+<body>
+
+    <h1>Add New Member</h1>
+
+    <form onsubmit="showThankYou(); return false;">
+        <label>Member Name:</label><br>
+        <input type="text" placeholder="Enter member name" required>
+        <br><br>
+
+        <label>Email:</label><br>
+        <input type="email" placeholder="Enter email" required>
+        <br><br>
+
+        <label>Phone Number:</label><br>
+        <input type="tel" placeholder="Enter phone number" required>
+        <br><br>
+
+        <label>Club:</label><br>
+        <select required>
+            <option value="">Select a club</option>
+            <option>Coding Club</option>
+            <option>Drama Club</option>
+            <option>Music Club</option>
+            <option>Sports Club</option>
+            <option>Eco Club</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Add Member</button>
+    </form>
+    <script>
+        function showThankYou() {
+            alert("Thank you for registering! Your registration has been successfully submitted.");
+}
+</script>
+
+</body>
+</html>

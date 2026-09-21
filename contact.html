@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="pages-style.css">
+</head>
+
+<body>
+
+    <div class="page-card">
+
+        <h1>📞 Contact Us</h1>
+
+        <h2>🏫 Student Club Management System</h2>
+
+        <p>📧 <strong>Email:</strong> info@club.com</p>
+        <p>📱 <strong>Phone:</strong> +91 98765 43210</p>
+        <p>📍 <strong>Address:</strong> College Campus, Student Activity Centre</p>
+
+        <h2>💬 Send Us a Message</h2>
+
+        <form onsubmit="showMessage(); return false;">
+
+            <label>👤 Name:</label><br>
+            <input type="text" placeholder="Enter your name" required>
+            <br><br>
+
+            <label>📧 Email:</label><br>
+            <input type="email" placeholder="Enter your email" required>
+            <br><br>
+
+            <label>💭 Message:</label><br>
+            <textarea rows="5" cols="40"
+                placeholder="Enter your message" required></textarea>
+            <br><br>
+
+            <button type="submit">📨 Send Message</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Thank you! Your message has been sent successfully. 😊");
+        }
+    </script>
+
+</body>
+</html>

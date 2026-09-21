@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Participation</title>
+    <link rel="stylesheet" href="pages-style.css">
+</head>
+
+<body>
+
+    <div class="page-card">
+
+        <h1>🏆 Club Participation</h1>
+
+        <form onsubmit="showParticipationMessage(); return false;">
+
+            <label>👤 Member Name:</label><br>
+            <input type="text" placeholder="Enter member name" required>
+            <br><br>
+
+            <label>🎯 Activity / Event:</label><br>
+            <input type="text" placeholder="Enter activity or event" required>
+            <br><br>
+
+            <label>📅 Date:</label><br>
+            <input type="date" required>
+            <br><br>
+
+            <label>📌 Participation Status:</label><br>
+            <select required>
+                <option value="">Select status</option>
+                <option>✅ Participated</option>
+                <option>🏆 Won</option>
+                <option>🥈 Runner-up</option>
+                <option>❌ Did Not Participate</option>
+            </select>
+            <br><br>
+
+            <button type="submit">💾 Save Participation</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        function showParticipationMessage() {
+            alert("Participation details have been successfully recorded! 😊");
+        }
+    </script>
+
+</body>
+</html>
