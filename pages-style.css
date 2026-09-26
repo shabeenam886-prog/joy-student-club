@@ -125,3 +125,34 @@ form button:hover {
     border: 1px solid #ccc;
     border-radius: 7px;
 }
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .page-card {
+        width: 95%;
+        max-width: none;
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .page-card h1 {
+        font-size: 26px;
+    }
+
+    .page-card h2 {
+        font-size: 21px;
+    }
+
+    .page-card form {
+        width: 100%;
+        max-width: none;
+    }
+
+    .page-card table {
+        font-size: 13px;
+    }
+}
