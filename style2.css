@@ -35,10 +35,13 @@ body {
 .menu-bar {
     background: rgba(190, 105, 140, 0.90);
     text-align: center;
+    width: 100%;
 }
 
 .menu-bar ul {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     color: gray;
     margin: 0;
@@ -46,11 +49,14 @@ body {
 }
 
 .menu-bar ul li {
-    width: 120px;
+    width: 140px;
     margin: 15px;
-    padding: 15px;
+    padding: 8px 12px;
     position: relative;
     display: inline-block;
+    white-space: nowrap;
+    min-width:140px;
+    text-align:center;
 }
 
 .menu-bar ul li a {
@@ -61,6 +67,11 @@ body {
     transition: 0.3s;
     font-family: "Trebuchet MS", Arial, sans-serif;
     white-space: nowrap;
+    font-size: 13px;
+}
+
+.menu-bar ul li:last-child {
+    min-width: 150px;
 }
 
 .menu-bar ul li:hover {
@@ -79,61 +90,53 @@ body {
 .sub-menu-1 {
     display: none;
     position: absolute;
-    top: 100%;          
+    top: 100%;
     left: 0;
-    background-color: rgba(248, 205, 220, 0.97);
-    min-width: 150px;
+    background: lightpink;
+    width: 220px;
     z-index: 1000;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    height: auto;
 }
 
 .sub-menu-1 ul {
+    display: block !important;
     list-style: none;
-    padding: 0;
+    padding: 15px 15px;
     margin: 0;
+    width: 100%;
 }
 
 .sub-menu-1 ul li {
-    padding: 10px;
-    border-bottom: 1px solid #fff;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10px 15px !important;
+    box-sizing: border-box;
+    text-align: left;
+    background: transparent;
+    border-bottom: 1px dotted green;
+    white-space: nowrap;
+    height: 60px;
+}
+
+.sub-menu-1 ul li:last-child {
+    border-bottom: none;
 }
 
 .sub-menu-1 ul li a {
-    color: brown;   
-    padding: 10px;
+    display: block !important;
+    width: 100%;
+    padding: 5px !important;
+    color: brown;
     text-decoration: none;
-    display: block;
+    white-space: nowrap;
 }
-
-.sub-menu-1 ul li a:hover {
-    color: rgb(73, 67, 67);    
-}
-
 
 .menu-bar ul li:hover .sub-menu-1 {
     display: block;
-    position: absolute;
-    background: lightpink;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-} 
-
-.menu-bar ul li:hover .sub-menu-1 ul {
-    display: block;
-    margin: 10px;
-}
-
-.menu-bar ul li:hover .sub-menu-1 ul li {
-    width: 150px;
-    padding: 10px;
-    border-bottom: 1px dotted green;
-    background: transparent;
-    border-radius: 0;
-    text-align: left;
-}
-
-.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
-    border-bottom: none;
 }
 
 
@@ -148,7 +151,36 @@ body {
     top: 0;
     left: 100%;
     background: darkred;
-    z-index: 1000;
+    z-index: 1001;
+    width: 210px;
+    min-width: 210px;
+}
+
+.sub-menu-2 li {
+    white-space: normal;
+    display:block;
+    width: 100%
+}
+
+.sub-menu-2 li a {
+    white-space: normal;
+    display: block;
+}
+
+.sub-menu-2 ul {
+    display: block;
+    width:100%;
+    margin: 0;
+    padding: 0;    
+}
+
+.sub-menu-2 ul li {
+    display: block;
+    float:none;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    white-space: normal;
 }
 
 .sub-menu-2 ul li a {
@@ -156,6 +188,8 @@ body {
     text-decoration: none;
     padding: 0;
     display: block;
+    width: 100;
+    white-space: normal;
 }
 
 .sub-menu-2 ul li a:hover {
@@ -263,3 +297,50 @@ footer {
     padding: 20px;
 }
 
+/* Mobile View */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 26px;
+        padding: 10px;
+    }
+
+    .menu-bar {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .menu-bar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-bar ul li {
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+
+    .menu-bar ul li a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    #intro,
+    #events {
+        width: 90%;
+        max-width: none;
+        margin: 25px auto;
+        padding: 20px;
+    }
+
+    #intro h2,
+    #events h2 {
+        font-size: 24px;
+    }
+
+    #intro p,
+    #events p {
+        font-size: 15px;
+    }
+}
